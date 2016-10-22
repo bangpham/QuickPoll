@@ -16,7 +16,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(this);
+        ProfileRecyclerAdapter adapter = new ProfileRecyclerAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
 
@@ -27,6 +27,6 @@ public class Profile extends AppCompatActivity {
 
 
     public void goToMain() {
-        startActivity(new Intent(Profile.this, MainScreenActivity.class));
+        startActivity(new Intent(Profile.this, QuestionActivity.class));
     }
 }

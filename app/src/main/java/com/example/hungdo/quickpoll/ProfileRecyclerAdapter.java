@@ -12,7 +12,7 @@ import static com.example.hungdo.quickpoll.R.id.card_view;
  * Created by Bang on 10/22/16.
  */
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
+public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
 
 
@@ -22,7 +22,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
     Context context;
     LayoutInflater inflater;
 
-    public RecyclerAdapter(Context context) {
+    public ProfileRecyclerAdapter(Context context) {
         this.context=context;
         inflater=LayoutInflater.from(context);
     }

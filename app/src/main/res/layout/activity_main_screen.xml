@@ -43,7 +43,7 @@
                 android:ems="10"
                 android:id="@+id/editText4"
                 android:layout_weight="2.21"
-                android:hint="Item 1" />
+                android:hint="Answer 1" />
 
         </LinearLayout>
 
@@ -66,14 +66,15 @@
                 android:ems="10"
                 android:id="@+id/editText5"
                 android:layout_weight="2.15"
-                android:hint="Item2" />
+                android:hint="Answer 2" />
         </LinearLayout>
 
         <Button
             android:text="Poll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" />
+            android:id="@+id/button2"
+            android:onClick="pollClick" />
 
         <ScrollView
             android:layout_width="match_parent"

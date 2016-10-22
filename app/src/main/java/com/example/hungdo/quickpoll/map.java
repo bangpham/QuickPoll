@@ -1,7 +1,5 @@
 package com.example.hungdo.quickpoll;
 
-
-import android.app.Activity;
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;

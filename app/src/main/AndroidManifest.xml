@@ -15,7 +15,19 @@
 
 
 
-        <activity android:name=".MainScreenActivity">
+=======
+        <activity android:name=".MainScreenActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Profile" />
+        <activity android:name=".FlashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+>>>>>>> 1949ee23a397528031027aa0e621e9cfaf357a0a
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

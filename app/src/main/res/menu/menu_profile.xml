@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.hungdo.quickpoll.Profile">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_myQuestions"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="My Questions"
         app:showAsAction="never" />
 </menu>

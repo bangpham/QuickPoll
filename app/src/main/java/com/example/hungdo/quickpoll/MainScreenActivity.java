@@ -12,10 +12,10 @@ public class MainScreenActivity extends AppCompatActivity {
 
 
 
-        //example to get longitude and latitude of location:
-        //map addr = new map(getBaseContext(), "60 Luckie Street NW Atlanta, GA 30303");
-        //System.out.println(addr.getLat());
-        //System.out.println(addr.getLong());
+        //To get longitude and latitude of location:
+        //map addr = new map(getBaseContext(), "");
+        //System.out.println("latitdute: " + addr.getLat());
+        //System.out.println("longitude: " + addr.getLong());
 
     }
 }

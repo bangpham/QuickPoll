@@ -45,7 +45,8 @@ public class map {
         }
         catch (IOException e) {
             e.printStackTrace();
-            return 00;
+            //return 00;
+
         }
         return latitude;
     }

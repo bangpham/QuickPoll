@@ -17,9 +17,7 @@ public class MainScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-
         ProfileRecyclerAdapter adapter = new ProfileRecyclerAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
@@ -27,6 +25,13 @@ public class MainScreenActivity extends AppCompatActivity {
         //Layout manager for Recycler view
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+        //To get longitude and latitude of location:
+        map addr = new map(getBaseContext(), "60 Luckie Street NW Atlanta, GA 30303");
+        System.out.println("latitdute: " + addr.getLat());
+        System.out.println("longitude: " + addr.getLong());
+
     }
 
     public void pollClick(View view) {

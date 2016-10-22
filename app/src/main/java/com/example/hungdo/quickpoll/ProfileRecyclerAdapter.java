@@ -16,7 +16,7 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
 
 
 
-    String [] name={"Androidwarriorssssssssssssssssssssssssssssssss","Stackoverflow","Developer Android","AndroidHive",
+    String [] name={"Bang ngố","Stackoverflow","Developer Android","AndroidHive",
             "Slidenerd","TheNewBoston","Truiton","HmkCode","JavaTpoint","Javapeper"};
 
     Context context;

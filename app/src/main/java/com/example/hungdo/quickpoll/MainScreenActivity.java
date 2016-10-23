@@ -97,10 +97,11 @@ public class MainScreenActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_myQuestions) {
-            startActivity(new Intent(MainScreenActivity.this, Profile.class));
+            if (Facade.getUser().getQuestions().size() != 0) {
+                startActivity(new Intent(MainScreenActivity.this, Profile.class));
+            }
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

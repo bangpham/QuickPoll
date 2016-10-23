@@ -148,6 +148,11 @@ public class Facade {
         user = null;
     }
 
+    public void createUser(String username) {
+        User newUser = new User(username, new ArrayList<Question>());
+        listUser.add(newUser);
+    }
+
     public static User getUser() {
         return user;
     }

@@ -36,7 +36,7 @@ public class Facade {
         Question q6 = new Question("Which hallowen costume do you prefer?", "sexy ronald mcdonal", "Hillary Clinton");
         Question q7 = new Question("Would you rather", "be colorblind", "lose ur sense of smell");
         List<Question> listQ1 = new ArrayList<>(Arrays.asList(q1, q2, q3, q4, q5, q6, q7));
-        User user1 = new User("4043458278", listQ1);
+        User user1 = new User("123456789", listQ1);
 
         Question q8 = new Question("Is Bang dep trai?", "No", "Ewww!");
         Question q9 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
@@ -112,5 +112,8 @@ public class Facade {
     public static Question getQuestionInfo() {
         return questionInfo;
     }
-    
+
+    public static void addQuestion(Question q) {
+        user.getQuestions().add(q);
+    }
 }

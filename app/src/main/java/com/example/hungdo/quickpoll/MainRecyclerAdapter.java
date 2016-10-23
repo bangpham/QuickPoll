@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
+import model.Facade;
+
 import static com.example.hungdo.quickpoll.R.id.card_view;
 
 /**
@@ -14,10 +18,8 @@ import static com.example.hungdo.quickpoll.R.id.card_view;
 
 public class MainRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
-
-
-    String [] name={"AndroidwarriorsssssssssssssMainsssssssssssssssssss","Stackoverflow","Developer Android","AndroidHive",
-            "Slidenerd","TheNewBoston","Truiton","HmkCode","JavaTpoint","Javapeper"};
+    Facade facade = Facade.getFacade();
+    List<Question> listAll = facade.getAllQuestion();
 
     Context context;
     LayoutInflater inflater;
@@ -36,7 +38,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-        holder.textview.setText(name[position]);
+        holder.textview.setText(listAll.get(position).getQuestion());
         holder.cardView.setOnClickListener(clickListener);
         holder.cardView.setTag(holder);
     }
@@ -48,13 +50,14 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder
             RecyclerViewHolder vholder = (RecyclerViewHolder) view.getTag();
             int position = vholder.getLayoutPosition();
             System.out.println(position);
-            context.startActivity(new Intent(context, MainScreenActivity.class));
+            facade.setQuestionInfo(listAll.get(position));
+            context.startActivity(new Intent(context, QuestionActivity.class));
         }
     };
 
 
     @Override
     public int getItemCount() {
-        return name.length;
+        return listAll.size();
     }
 }

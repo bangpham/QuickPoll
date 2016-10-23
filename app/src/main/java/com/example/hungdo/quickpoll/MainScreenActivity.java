@@ -17,11 +17,10 @@ public class MainScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Facade.initialize();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        ProfileRecyclerAdapter adapter = new ProfileRecyclerAdapter(this);
+        MainRecyclerAdapter adapter = new MainRecyclerAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
 

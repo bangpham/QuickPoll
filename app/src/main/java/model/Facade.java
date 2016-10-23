@@ -14,6 +14,7 @@ public class Facade {
     private static Facade facade;
     private static List<User> listUser;
     private static User user;
+    private static Question questionInfo;
 
     public static void initialize() {
 
@@ -28,12 +29,16 @@ public class Facade {
         Question q7 = new Question("Would you rather", "be colorblind", "lose ur sense of smell");
         List<Question> listQ1 = new ArrayList<>(Arrays.asList(q1, q2, q3, q4, q5, q6, q7));
         User user1 = new User("4043458278", listQ1);
+<<<<<<< HEAD
         Question q8 = new Question("Is Bang dep trai?", "No", "Ewww!");
+=======
+        Question q8 = new Question("this is different", "thisasd","Hillary Clinton");
+>>>>>>> 3717414c44c4da1660a777bfab6a133dabf44a3f
         Question q9 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q10 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q11 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         List<Question> listQ2 = new ArrayList<>(Arrays.asList(q8, q9, q10, q11));
-        User user2 = new User("6783458278", listQ2);
+        User user2 = new User("4043334902", listQ2);
         Question q12 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q13 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q14 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
@@ -88,5 +93,17 @@ public class Facade {
             }
         }
         return null;
+    }
+
+    public static User getUser() {
+        return user;
+    }
+
+    public static void setQuestionInfo(Question q) {
+        questionInfo = q;
+    }
+
+    public static Question getQuestionInfo() {
+        return questionInfo;
     }
 }

@@ -40,8 +40,8 @@ public class Question {
         return answerB;
     }
 
-    public int getCount() {
-        return count;
+    public int getTotal() {
+        return aCount + bCount;
     }
 
     public int getACount() {
@@ -49,6 +49,14 @@ public class Question {
     }
     public int getBCount() {
         return bCount;
+    }
+
+    public void setACount(int count) {
+        aCount = count;
+    }
+
+    public void setBCount(int count) {
+        bCount = count;
     }
 
 }

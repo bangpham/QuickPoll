@@ -32,4 +32,9 @@ public class User {
     public void setQuestions(List<Question> questions) {
         this.questions = questions;
     }
+
+    public void addQuestion(Question q) {
+        questions.add(q);
+    }
+
 }

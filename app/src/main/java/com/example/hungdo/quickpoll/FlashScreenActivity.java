@@ -13,6 +13,7 @@ public class FlashScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Facade.initialize();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash_screen);
 

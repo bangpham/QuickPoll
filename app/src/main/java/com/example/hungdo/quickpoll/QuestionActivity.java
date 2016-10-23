@@ -3,35 +3,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import model.Facade;
+
 public class QuestionActivity extends AppCompatActivity {
     private TextView question;
     private TextView answerA;
     private TextView answerB;
     private TextView aCount;
     private TextView bCount;
+    Facade facade = Facade.getFacade();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
-        question = (TextView) findViewById(R.id.question);
+        question = (TextView) findViewById(R.id.title);
+        question.setText(facade.getQuestionInfo().getQuestion());
+        System.out.println(facade.getQuestionInfo().getQuestion());
         answerA = (TextView) findViewById(R.id.answerA);
-        answerA = (TextView) findViewById(R.id.answerB);
+        answerA.setText(facade.getQuestionInfo().getA());
+        answerB = (TextView) findViewById(R.id.answerB);
+        answerB.setText(facade.getQuestionInfo().getB());
         aCount = (TextView) findViewById(R.id.aCount);
         bCount = (TextView) findViewById(R.id.bCount);
 
-
     }
 
-//    View.OnClickListener clickListener = new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//
-//            RecyclerViewHolder vholder = (RecyclerViewHolder) view.getTag();
-//            int position = vholder.getLayoutPosition();
-//            System.out.println(position);
-//            context.startActivity(new Intent(context, MainScreenActivity.class));
-//        }
-//    };
+
 }
 

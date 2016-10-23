@@ -19,10 +19,7 @@ import static com.example.hungdo.quickpoll.R.id.card_view;
 public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
     Facade facade = Facade.getFacade();
-
-
-    List<Question> listAll = facade.getAllQuestion();
-
+    List<Question> myListQuestion = facade.getListQuestionByID(Facade.getUser().getID());
 
     Context context;
     LayoutInflater inflater;
@@ -41,7 +38,7 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-        holder.textview.setText(listAll.get(position).getQuestion());
+        holder.textview.setText(myListQuestion.get(position).getQuestion());
         holder.cardView.setOnClickListener(clickListener);
         holder.cardView.setTag(holder);
     }
@@ -53,6 +50,7 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
             RecyclerViewHolder vholder = (RecyclerViewHolder) view.getTag();
             int position = vholder.getLayoutPosition();
             System.out.println(position);
+            facade.setQuestionInfo(myListQuestion.get(position));
             context.startActivity(new Intent(context, QuestionActivity.class));
         }
     };
@@ -60,6 +58,6 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
 
     @Override
     public int getItemCount() {
-        return listAll.size();
+        return myListQuestion.size();
     }
 }

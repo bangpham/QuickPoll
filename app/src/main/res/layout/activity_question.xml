@@ -16,7 +16,7 @@
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="223dp">
+            android:layout_height="250dp">
 
             <TextView
                 android:text="Donald Trump"

@@ -25,6 +25,8 @@ public class QuestionActivity extends AppCompatActivity {
         answerB = (TextView) findViewById(R.id.answerB);
         answerB.setText(facade.getQuestionInfo().getB());
         aCount = (TextView) findViewById(R.id.aCount);
+        aCount.setText(facade.getQuestionInfo().getACount() + "");
         bCount = (TextView) findViewById(R.id.bCount);
+        bCount.setText(facade.getQuestionInfo().getBCount() + "");
     }
 }

@@ -21,14 +21,22 @@ public class Facade {
         // initialize the one facade instance for the application
         facade = new Facade();
         Question q1 = new Question("Who will be the President of the US?", "Donald Trum", "Hillary Clinton");
+        q1.setACount(13);
+        q1.setBCount(123);
         Question q2 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
+        q2.setACount(46);
+        q2.setBCount(9);
         Question q3 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
+        q3.setACount(10);
+        q3.setBCount(2);
         Question q4 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
+        q4.setACount(388);
+        q4.setBCount(912);
         Question q5 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q6 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q7 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         List<Question> listQ1 = new ArrayList<>(Arrays.asList(q1, q2, q3, q4, q5, q6, q7));
-        User user1 = new User("4043458278", listQ1);
+        User user1 = new User("123456789", listQ1);
         Question q8 = new Question("this is different", "thisasd","Hillary Clinton");
         Question q9 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q10 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
@@ -102,4 +110,5 @@ public class Facade {
     public static Question getQuestionInfo() {
         return questionInfo;
     }
+    
 }

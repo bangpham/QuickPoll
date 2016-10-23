@@ -48,7 +48,7 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
             RecyclerViewHolder vholder = (RecyclerViewHolder) view.getTag();
             int position = vholder.getLayoutPosition();
             System.out.println(position);
-            context.startActivity(new Intent(context, MainScreenActivity.class));
+            context.startActivity(new Intent(context, QuestionActivity.class));
         }
     };
 

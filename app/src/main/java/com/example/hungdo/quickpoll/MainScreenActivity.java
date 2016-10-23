@@ -32,6 +32,12 @@ public class MainScreenActivity extends AppCompatActivity {
         System.out.println("latitdute: " + addr.getLat());
         System.out.println("longitude: " + addr.getLong());
 
+
+//        DBconnect aa = new DBconnect();
+//        aa.connect();
+//     //   aa.ThanhCaptain();
+//        System.out.println(aa);
+
     }
 
     public void pollClick(View view) {

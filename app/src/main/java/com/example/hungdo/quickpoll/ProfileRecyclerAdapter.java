@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
+import model.Facade;
+
 import static com.example.hungdo.quickpoll.R.id.card_view;
 
 /**
@@ -14,8 +18,8 @@ import static com.example.hungdo.quickpoll.R.id.card_view;
 
 public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
-
-
+    Facade facade = Facade.getFacade();
+    List<Question> listAll = facade.
     String [] name={"Bang ngố","Stackoverflow","Developer Android","AndroidHive",
             "Slidenerd","TheNewBoston","Truiton","HmkCode","JavaTpoint","Javapeper"};
 

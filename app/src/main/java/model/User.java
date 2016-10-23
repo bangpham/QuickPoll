@@ -9,24 +9,24 @@ import java.util.List;
  */
 
 public class User {
-    private  int phoneNum;
+    private  String id;
     private List<Question> questions;
 
-    public User(int phoneNum, List<Question> questions) {
-        this.phoneNum = phoneNum;
+    public User(String id, List<Question> questions) {
+        this.id = id;
         this.questions = questions;
     }
 
-    public int getPhoneNum() {
-        return phoneNum;
+    public String getID() {
+        return id;
     }
 
     public List<Question> getQuestions() {
         return questions;
     }
 
-    public void setPhoneNum(int phoneNum) {
-        this.phoneNum = phoneNum;
+    public void setID(String id) {
+        this.id = id;
     }
 
     public void setQuestions(List<Question> questions) {

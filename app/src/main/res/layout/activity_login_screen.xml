@@ -14,16 +14,17 @@
         android:text="Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/UserNameEnter"
+        android:layout_below="@+id/userNameEnter"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
-        android:id="@+id/UserNameSubmit" />
+        android:id="@+id/UserNameSubmit"
+        android:onClick="loginClick" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:id="@+id/UserNameEnter"
+        android:id="@+id/userNameEnter"
         android:hint="Enter Your Unique User Name"
         android:inputType="text"
         android:layout_alignParentTop="true"

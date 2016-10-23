@@ -20,15 +20,15 @@ public class Facade {
         // initialize the one facade instance for the application
         facade = new Facade();
         Question q1 = new Question("Who will be the President of the US?", "Donald Trum", "Hillary Clinton");
-        Question q2 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
-        Question q3 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
-        Question q4 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
-        Question q5 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
-        Question q6 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
-        Question q7 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
+        Question q2 = new Question("How often do you party?", "everyday", "Never");
+        Question q3 = new Question("are you happy with your student life?", "Donald Trum", "of course!");
+        Question q4 = new Question("Which fastfood item has more calories?", "Dunkin's donut jelly donut", "taco bells crunchwrap");
+        Question q5 = new Question("Which starbuck order is better?", "Caramel macchiato", "sexy corn cob");
+        Question q6 = new Question("Which hallowen costume do you prefer?", "sexy ronald mcdonal", "Hillary Clinton");
+        Question q7 = new Question("Would you rather", "be colorblind", "lose ur sense of smell");
         List<Question> listQ1 = new ArrayList<>(Arrays.asList(q1, q2, q3, q4, q5, q6, q7));
         User user1 = new User("4043458278", listQ1);
-        Question q8 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
+        Question q8 = new Question("Is Bang dep trai?", "No", "Ewww!");
         Question q9 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q10 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q11 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");

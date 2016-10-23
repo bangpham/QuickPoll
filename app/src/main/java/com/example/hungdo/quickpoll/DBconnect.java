@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.sql.Statement;
 
 
@@ -23,15 +24,20 @@ public class DBconnect {
         try {
             Class.forName("com.mysql.jdbc.Driver");
         }catch(Exception e) {
-            System.out.println("Unable to load Driver");
+            System.out.println("-----------------------Unable to load Driver");
         }
 
         //Establish connection using DriverManager
         try {
-            con = DriverManager.getConnection("jdbc:mysql://10.251.32.188/QuickPoll?" +
-                    "user=root&password=root");
+            con = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/question1?" +
+                    "user=question1&password=1234567");
+            if(con == null){
+                System.out.print("None-----------------------------");
+            }else{
+                System.out.print("Yes ----------------");
+            }
         } catch (SQLException e) {
-            System.out.println("Unable to connect to database");
+            System.out.println("-----------------------Unable to connect to database");
         }
         return null;
     }

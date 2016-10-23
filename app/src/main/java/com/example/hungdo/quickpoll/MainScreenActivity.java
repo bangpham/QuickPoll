@@ -32,13 +32,13 @@ public class MainScreenActivity extends AppCompatActivity {
 
         //To get longitude and latitude of location:
         map addr = new map(getBaseContext(), "60 Luckie Street NW Atlanta, GA 30303");
-        System.out.println("latitdute: " + addr.getLat());
+        System.out.println("latitdute************************: " + addr.getLat());
         System.out.println("longitude: " + addr.getLong());
 
 
 //        DBconnect aa = new DBconnect();
 //        aa.connect();
-//     //   aa.ThanhCaptain();
+//         aa.ThanhCaptain();
 //        System.out.println(aa);
 
     }

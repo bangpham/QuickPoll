@@ -47,24 +47,28 @@ public class QuestionActivity extends AppCompatActivity {
     public void answerAClicked(View view) {
         if (!facade.profileQuestion) {
             answerA.setBackground(new ColorDrawable(Color.parseColor("#F50057")));
-            answerA.setTextSize(16);
+            answerA.setTextSize(20);
             answerA.setTypeface(null, Typeface.BOLD);
+            aCount.setTextSize(20);
+            aCount.setTypeface(null, Typeface.BOLD);
             answerA.setClickable(false);
             answerB.setClickable(false);
             facade.getQuestionInfo().incrementA();
-            aCount.setText(facade.getQuestionInfo().getACount() + "");
+            aCount.setText("You voted " + facade.getQuestionInfo().getACount() + "");
         }
     }
 
     public void answerBClicked(View view) {
         if (!facade.profileQuestion) {
             answerB.setBackground(new ColorDrawable(Color.parseColor("#1A237E")));
-            answerB.setTextSize(16);
+            answerB.setTextSize(20);
             answerB.setTypeface(null, Typeface.BOLD);
+            bCount.setTextSize(20);
+            bCount.setTypeface(null, Typeface.BOLD);
             answerA.setClickable(false);
             answerB.setClickable(false);
             facade.getQuestionInfo().incrementB();
-            bCount.setText(facade.getQuestionInfo().getBCount() + "");
+            bCount.setText("You voted " + facade.getQuestionInfo().getBCount() + "");
         }
     }
 

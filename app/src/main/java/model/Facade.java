@@ -24,7 +24,7 @@ public class Facade {
         Question q1 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         q1.setACount(55);
         q1.setBCount(77);
-        Question q2 = new Question("Is Bang dep trai?", "No", "Ewww!");
+        Question q2 = new Question("Would you date someone on Tinder?", "No", "Ewww!");
         q2.setACount(50);
         q2.setBCount(112);
         Question q3 = new Question("Are you happy with your student life?", "Donald Trum", "of course!");

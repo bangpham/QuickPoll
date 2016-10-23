@@ -42,7 +42,7 @@ public class Facade {
         q7.setACount(38);
         q7.setBCount(91);
         List<Question> listQ1 = new ArrayList<>(Arrays.asList(q1, q2, q3, q4, q5, q6, q7));
-        User user1 = new User("4043458278", listQ1);
+        User user1 = new User("user1", listQ1);
 
         Question q8 = new Question("How often do you party?", "everyday", "Never");
         q8.setACount(13);
@@ -57,7 +57,7 @@ public class Facade {
         q8.setACount(13);
         q8.setBCount(123);
         List<Question> listQ2 = new ArrayList<>(Arrays.asList(q8, q9, q10, q11));
-        User user2 = new User("4043334902", listQ2);
+        User user2 = new User("user2", listQ2);
 
         Question q12 = new Question("Who is the hottest celebrity?", "Emma Watson", "Hillary Clinton");
         q8.setACount(13);
@@ -102,7 +102,7 @@ public class Facade {
         q8.setACount(135);
         q8.setBCount(12223);
         List<Question> listQ3 = new ArrayList<>(Arrays.asList(q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25));
-        User user3 = new User("4043453278", listQ3);
+        User user3 = new User("user3", listQ3);
         listUser = new ArrayList<>(Arrays.asList(user1, user2, user3));
     }
 
@@ -154,5 +154,8 @@ public class Facade {
     public static Question getQuestionInfo() {
         return questionInfo;
     }
-    
+
+    public static void addQuestion(Question q) {
+        user.getQuestions().add(q);
+    }
 }

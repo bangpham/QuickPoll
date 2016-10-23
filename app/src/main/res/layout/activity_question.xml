@@ -67,7 +67,7 @@
                 android:layout_centerHorizontal="true"
                 android:id="@+id/answerB"
                 android:minHeight="0dp"
-                android:onClick="onClick"
+                android:onClick="answerBClicked"
                 android:clickable="true"
                 android:gravity="center_vertical|center_horizontal"
                 android:background="@color/colorPrimary"

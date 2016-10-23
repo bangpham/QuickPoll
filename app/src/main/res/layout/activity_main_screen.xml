@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/editText6"
+            android:id="@+id/editQuestion"
             android:hint="What the question do you want to ask?"
             android:minHeight="45dp" />
 
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText4"
+                android:id="@+id/editAnswerA"
                 android:layout_weight="2.21"
                 android:hint="Answer 1" />
 
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText5"
+                    android:id="@+id/editAnswerB"
                     android:layout_weight="2.15"
                     android:hint="Answer 2" />
             </LinearLayout>

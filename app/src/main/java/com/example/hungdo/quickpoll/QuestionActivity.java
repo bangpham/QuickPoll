@@ -19,5 +19,19 @@ public class QuestionActivity extends AppCompatActivity {
         answerA = (TextView) findViewById(R.id.answerB);
         aCount = (TextView) findViewById(R.id.aCount);
         bCount = (TextView) findViewById(R.id.bCount);
+
+
     }
+
+//    View.OnClickListener clickListener = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//
+//            RecyclerViewHolder vholder = (RecyclerViewHolder) view.getTag();
+//            int position = vholder.getLayoutPosition();
+//            System.out.println(position);
+//            context.startActivity(new Intent(context, MainScreenActivity.class));
+//        }
+//    };
 }
+

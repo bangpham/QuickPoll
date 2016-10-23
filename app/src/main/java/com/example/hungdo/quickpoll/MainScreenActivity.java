@@ -9,12 +9,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import model.Facade;
+
 
 public class MainScreenActivity extends AppCompatActivity {
     RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Facade.initialize();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);

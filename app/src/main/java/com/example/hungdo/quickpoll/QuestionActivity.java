@@ -1,4 +1,5 @@
 package com.example.hungdo.quickpoll;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
@@ -35,8 +36,11 @@ public class QuestionActivity extends AppCompatActivity {
 
         answerA.setClickable(true);
         answerB.setClickable(true);
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainScreenActivity.class));
     }
 
     public void answerAClicked(View view) {

@@ -46,6 +46,7 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
         holder.imageView.setImageResource(R.drawable.user);
     }
 
+
     View.OnClickListener clickListener=new View.OnClickListener() {
         @Override
         public void onClick(View view) {

@@ -27,7 +27,7 @@ public class Profile extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(this, LoginScreenActivity.class));
+        startActivity(new Intent(this, MainScreenActivity.class));
         finish();
     }
 

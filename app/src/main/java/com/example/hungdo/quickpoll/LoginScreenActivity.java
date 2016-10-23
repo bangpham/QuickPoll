@@ -1,9 +1,11 @@
 package com.example.hungdo.quickpoll;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,10 +37,23 @@ public class LoginScreenActivity extends Activity {
     public void loginClick(View view) {
         Facade facade = Facade.getFacade();
         EditText editText = (EditText) findViewById(R.id.userNameEnter);
-        facade.getUserByID(editText.getText().toString());
-        Intent mainScreen = new Intent(LoginScreenActivity.this, MainScreenActivity.class);
-        //mainScreen.putExtra("bmi", bmi); //passing value
-        LoginScreenActivity.this.startActivity(mainScreen);
+        if (editText.getText().toString().equals("")) {
+            AlertDialog alertDialog = new AlertDialog.Builder(LoginScreenActivity.this).create();
+            alertDialog.setTitle("WARNING");
+            alertDialog.setMessage("Please input your username!!!");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alertDialog.show();
+        } else {
+            facade.getUserByID(editText.getText().toString());
+            Intent mainScreen = new Intent(LoginScreenActivity.this, MainScreenActivity.class);
+            //mainScreen.putExtra("bmi", bmi); //passing value
+            LoginScreenActivity.this.startActivity(mainScreen);
+        }
     }
 
 

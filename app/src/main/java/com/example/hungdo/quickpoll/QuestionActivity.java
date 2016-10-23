@@ -45,23 +45,27 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     public void answerAClicked(View view) {
-        answerA.setBackground(new ColorDrawable(Color.parseColor("#F50057")));
-        answerA.setTextSize(16);
-        answerA.setTypeface(null, Typeface.BOLD);
-        answerA.setClickable(false);
-        answerB.setClickable(false);
-        facade.getQuestionInfo().incrementA();
-        aCount.setText(facade.getQuestionInfo().getACount() + "");
+        if (!facade.profileQuestion) {
+            answerA.setBackground(new ColorDrawable(Color.parseColor("#F50057")));
+            answerA.setTextSize(16);
+            answerA.setTypeface(null, Typeface.BOLD);
+            answerA.setClickable(false);
+            answerB.setClickable(false);
+            facade.getQuestionInfo().incrementA();
+            aCount.setText(facade.getQuestionInfo().getACount() + "");
+        }
     }
 
     public void answerBClicked(View view) {
-        answerB.setBackground(new ColorDrawable(Color.parseColor("#1A237E")));
-        answerB.setTextSize(16);
-        answerB.setTypeface(null, Typeface.BOLD);
-        answerA.setClickable(false);
-        answerB.setClickable(false);
-        facade.getQuestionInfo().incrementB();
-        bCount.setText(facade.getQuestionInfo().getBCount() + "");
+        if (!facade.profileQuestion) {
+            answerB.setBackground(new ColorDrawable(Color.parseColor("#1A237E")));
+            answerB.setTextSize(16);
+            answerB.setTypeface(null, Typeface.BOLD);
+            answerA.setClickable(false);
+            answerB.setClickable(false);
+            facade.getQuestionInfo().incrementB();
+            bCount.setText(facade.getQuestionInfo().getBCount() + "");
+        }
     }
 
 }

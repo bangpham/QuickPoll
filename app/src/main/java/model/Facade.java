@@ -15,6 +15,7 @@ public class Facade {
     private static List<User> listUser;
     private static User user;
     private static Question questionInfo;
+    public static boolean profileQuestion;
 
     public static void initialize() {
 
@@ -167,4 +168,5 @@ public class Facade {
     public static void addQuestion(Question q) {
         user.getQuestions().add(q);
     }
+
 }

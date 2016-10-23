@@ -54,6 +54,7 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
             int position = vholder.getLayoutPosition();
             System.out.println(position);
             facade.setQuestionInfo(myListQuestion.get(position));
+            facade.profileQuestion = true;
             context.startActivity(new Intent(context, QuestionActivity.class));
         }
     };

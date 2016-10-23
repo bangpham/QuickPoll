@@ -53,6 +53,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder
             int position = vholder.getLayoutPosition();
             System.out.println(position);
             facade.setQuestionInfo(listAll.get(position));
+            facade.profileQuestion = false;
             context.startActivity(new Intent(context, QuestionActivity.class));
         }
     };

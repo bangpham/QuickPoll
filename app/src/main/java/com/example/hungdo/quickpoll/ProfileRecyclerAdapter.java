@@ -20,7 +20,7 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
 
     Facade facade = Facade.getFacade();
     List<Question> listAll = facade.
-    String [] name={"Bang ngố","Stackoverflow","Developer Android","AndroidHive",
+    String[] name = {"Bang ngố","Stackoverflow","Developer Android","AndroidHive",
             "Slidenerd","TheNewBoston","Truiton","HmkCode","JavaTpoint","Javapeper"};
 
     Context context;

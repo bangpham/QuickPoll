@@ -23,6 +23,9 @@ public class LoginScreenActivity extends Activity {
         userNamebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
                 //navigate to new activity
                 Intent mainScreen = new Intent(LoginScreenActivity.this, MainScreenActivity.class);
                 //mainScreen.putExtra("bmi", bmi); //passing value

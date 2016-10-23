@@ -83,6 +83,7 @@ public class MainScreenActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, LoginScreenActivity.class));
+        finish();
     }
 
     @Override

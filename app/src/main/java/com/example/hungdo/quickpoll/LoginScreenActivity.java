@@ -23,25 +23,15 @@ public class LoginScreenActivity extends Activity {
     }
 
 
-    private Boolean exit = false;
-    @Override
-    public void onBackPressed() {
-        if (exit) {
-            finish(); // finish activity
-        } else {
-            Toast.makeText(this, "Press Back again to Exit.",
-                    Toast.LENGTH_SHORT).show();
-            exit = true;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    exit = false;
-                }
-            }, 3 * 1000);
-
-        }
-
+    //exit app on back button
+    public void onBackPressed(){
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
     }
+
+
     public void loginClick(View view) {
         Facade facade = Facade.getFacade();
         EditText editText = (EditText) findViewById(R.id.userNameEnter);

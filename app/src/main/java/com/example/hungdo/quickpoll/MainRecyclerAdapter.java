@@ -39,7 +39,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         holder.textview.setText(listAll.get(position).getQuestion());
-        holder.textview2.setText("Total vote " + listAll.get(position).getTotal());
+        holder.textview2.setText(listAll.get(position).getTotal() + " votes");
         holder.cardView.setOnClickListener(clickListener);
         holder.cardView.setTag(holder);
         holder.imageView.setImageResource(R.drawable.user);

@@ -49,7 +49,11 @@ public class LoginScreenActivity extends Activity {
                     });
             alertDialog.show();
         } else {
-            facade.getUserByID(editText.getText().toString());
+            Facade.getUserByID(editText.getText().toString());
+            if (Facade.getUser() == null) {
+                facade.createUser(editText.getText().toString());
+                Facade.getUserByID(editText.getText().toString());
+            }
             Intent mainScreen = new Intent(LoginScreenActivity.this, MainScreenActivity.class);
             //mainScreen.putExtra("bmi", bmi); //passing value
             LoginScreenActivity.this.startActivity(mainScreen);

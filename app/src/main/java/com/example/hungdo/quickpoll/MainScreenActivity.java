@@ -1,6 +1,8 @@
 package com.example.hungdo.quickpoll;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,15 +10,21 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 import model.Facade;
 
 
 public class MainScreenActivity extends AppCompatActivity {
     RecyclerView recyclerView;
+    private Facade facade = Facade.getFacade();
+    EditText editQues;
+    EditText editAnsA;
+    EditText editAnsB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
@@ -35,15 +43,30 @@ public class MainScreenActivity extends AppCompatActivity {
         System.out.println("longitude: " + addr.getLong());
 
 
-//        DBconnect aa = new DBconnect();
-//        aa.connect();
-//         aa.ThanhCaptain();
-//        System.out.println(aa);
+        editQues = (EditText) findViewById(R.id.editQuestion);
+        editAnsA = (EditText) findViewById(R.id.editAnswerA);
+        editAnsB = (EditText) findViewById(R.id.editAnswerB);
 
     }
 
     public void pollClick(View view) {
-        startActivity(new Intent(MainScreenActivity.this, Profile.class));
+        if (editQues.getText().toString().equals("") || editAnsA.getText().toString().equals("") || editAnsB.getText().toString().equals("")) {
+            AlertDialog alertDialog = new AlertDialog.Builder(MainScreenActivity.this).create();
+            alertDialog.setTitle("WARNING");
+            alertDialog.setMessage("Cannot leave any empty field!!!");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alertDialog.show();
+        } else {
+            Question newQuestion = new Question(editQues.getText().toString(), editAnsA.getText().toString(), editAnsB.getText().toString());
+            facade.addQuestion(newQuestion);
+            finish();
+            startActivity(getIntent());
+        }
     }
 
     @Override

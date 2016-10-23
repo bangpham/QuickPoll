@@ -32,8 +32,10 @@ public class QuestionActivity extends AppCompatActivity {
         aCount.setText(facade.getQuestionInfo().getACount() + "");
         bCount = (TextView) findViewById(R.id.bCount);
         bCount.setText(facade.getQuestionInfo().getBCount() + "");
+
         answerA.setClickable(true);
         answerB.setClickable(true);
+
 
     }
 

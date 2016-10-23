@@ -10,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.widget.EditText;
 
 import model.Facade;
@@ -64,8 +66,12 @@ public class MainScreenActivity extends AppCompatActivity {
         } else {
             Question newQuestion = new Question(editQues.getText().toString(), editAnsA.getText().toString(), editAnsB.getText().toString());
             facade.addQuestion(newQuestion);
-            finish();
-            startActivity(getIntent());
+            CookieSyncManager.createInstance(this);
+            CookieManager cookieManager = CookieManager.getInstance();
+            cookieManager.removeAllCookie();
+            Intent intent= new Intent(MainScreenActivity.this, MainScreenActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
     }
 

@@ -36,14 +36,14 @@ public class Facade {
         Question q6 = new Question("Which hallowen costume do you prefer?", "sexy ronald mcdonal", "Hillary Clinton");
         Question q7 = new Question("Would you rather", "be colorblind", "lose ur sense of smell");
         List<Question> listQ1 = new ArrayList<>(Arrays.asList(q1, q2, q3, q4, q5, q6, q7));
-        User user1 = new User("123456789", listQ1);
+        User user1 = new User("user1", listQ1);
 
         Question q8 = new Question("Is Bang dep trai?", "No", "Ewww!");
         Question q9 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q10 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q11 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         List<Question> listQ2 = new ArrayList<>(Arrays.asList(q8, q9, q10, q11));
-        User user2 = new User("4043334902", listQ2);
+        User user2 = new User("user2", listQ2);
 
         Question q12 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q13 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
@@ -60,7 +60,7 @@ public class Facade {
         Question q24 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q25 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         List<Question> listQ3 = new ArrayList<>(Arrays.asList(q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25));
-        User user3 = new User("4043453278", listQ3);
+        User user3 = new User("user3", listQ3);
         listUser = new ArrayList<>(Arrays.asList(user1, user2, user3));
     }
 

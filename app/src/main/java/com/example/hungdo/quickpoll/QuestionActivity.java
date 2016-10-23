@@ -1,5 +1,6 @@
 package com.example.hungdo.quickpoll;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,13 +32,30 @@ public class QuestionActivity extends AppCompatActivity {
         aCount.setText(facade.getQuestionInfo().getACount() + "");
         bCount = (TextView) findViewById(R.id.bCount);
         bCount.setText(facade.getQuestionInfo().getBCount() + "");
+        answerA.setClickable(true);
+        answerB.setClickable(true);
 
     }
 
     public void answerAClicked(View view) {
-        answerA.setBackground(new ColorDrawable(Color.parseColor("#EC407A")));
+        answerA.setBackground(new ColorDrawable(Color.parseColor("#F50057")));
+        answerA.setTextSize(16);
+        answerA.setTypeface(null, Typeface.BOLD);
+        answerA.setClickable(false);
+        answerB.setClickable(false);
+        facade.getQuestionInfo().incrementA();
+        aCount.setText(facade.getQuestionInfo().getACount() + "");
     }
 
+    public void answerBClicked(View view) {
+        answerB.setBackground(new ColorDrawable(Color.parseColor("#1A237E")));
+        answerB.setTextSize(16);
+        answerB.setTypeface(null, Typeface.BOLD);
+        answerA.setClickable(false);
+        answerB.setClickable(false);
+        facade.getQuestionInfo().incrementB();
+        bCount.setText(facade.getQuestionInfo().getBCount() + "");
+    }
 
 }
 

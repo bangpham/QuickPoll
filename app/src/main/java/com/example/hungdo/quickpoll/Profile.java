@@ -25,6 +25,12 @@ public class Profile extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainScreenActivity.class));
+        finish();
+    }
+
 
     public void goToMain() {
         startActivity(new Intent(Profile.this, QuestionActivity.class));

@@ -166,7 +166,7 @@ public class Facade {
     }
 
     public static void addQuestion(Question q) {
-        user.getQuestions().add(q);
+        user.getQuestions().add(0, q);
     }
 
 }

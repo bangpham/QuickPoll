@@ -2,6 +2,7 @@ package com.example.hungdo.quickpoll;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import model.Facade;
 
@@ -74,6 +76,9 @@ public class MainScreenActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

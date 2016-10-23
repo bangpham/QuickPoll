@@ -3,10 +3,12 @@ package com.example.hungdo.quickpoll;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import model.Facade;
 
@@ -18,10 +20,28 @@ public class LoginScreenActivity extends Activity {
         setContentView(R.layout.activity_login_screen);
 
         userNamebutton = (Button) findViewById(R.id.UserNameSubmit);
-
-
     }
 
+
+    private Boolean exit = false;
+    @Override
+    public void onBackPressed() {
+        if (exit) {
+            finish(); // finish activity
+        } else {
+            Toast.makeText(this, "Press Back again to Exit.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 3 * 1000);
+
+        }
+
+    }
     public void loginClick(View view) {
         Facade facade = Facade.getFacade();
         EditText editText = (EditText) findViewById(R.id.userNameEnter);

@@ -6,15 +6,16 @@ package com.example.hungdo.quickpoll;
 
 public class Question {
     private String question;
-    private String[] answers;
+    private String answerA;
+    private String answerB;
     private int count;
     private int aCount;
     private int bCount;
 
     public Question(String question, String answerA, String answerB) {
         this.question = question;
-        answers[0] = answerA;
-        answers[1] = answerB;
+        this.answerA = answerA;
+        this.answerB = answerB;
     }
 
     public void incrementA() {
@@ -32,11 +33,11 @@ public class Question {
     }
 
     public String getA() {
-        return answers[0];
+        return answerA;
     }
 
     public String getB() {
-        return answers[1];
+        return answerB;
     }
 
     public int getCount() {

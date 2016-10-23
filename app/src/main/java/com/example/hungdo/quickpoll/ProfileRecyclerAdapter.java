@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import static com.example.hungdo.quickpoll.R.id.card_view;
  */
 
 public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
-
+    //TextView title = (TextView) findViewById(R.id.list_title);
     Facade facade = Facade.getFacade();
     List<Question> myListQuestion = facade.getListQuestionByID(Facade.getUser().getID());
 

@@ -40,8 +40,10 @@ public class ProfileRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHol
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         holder.textview.setText(myListQuestion.get(position).getQuestion());
+        holder.textview2.setText("Total vote " + myListQuestion.get(position).getTotal());
         holder.cardView.setOnClickListener(clickListener);
         holder.cardView.setTag(holder);
+        holder.imageView.setImageResource(R.drawable.user);
     }
 
     View.OnClickListener clickListener=new View.OnClickListener() {

@@ -30,7 +30,7 @@ public class FlashScreenActivity extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 iv.startAnimation(an2);
                 finish();
-                Intent i = new Intent(FlashScreenActivity.this, MainScreenActivity.class);
+                Intent i = new Intent(FlashScreenActivity.this, LoginScreenActivity.class);
                 startActivity(i);
             }
 

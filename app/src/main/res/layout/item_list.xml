@@ -51,6 +51,7 @@
             android:textColor="#000000"
             android:ellipsize="end"
             android:textAppearance="?attr/textAppearanceListItem"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:text="15 votes" />
     </RelativeLayout>
 </android.support.v7.widget.CardView>

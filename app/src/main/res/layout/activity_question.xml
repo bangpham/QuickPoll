@@ -45,6 +45,19 @@
                 android:gravity="center_horizontal"
                 android:translationY="20dp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/youVotedA"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:textColor="@color/cardview_light_background"
+                android:translationY="-20dp"
+                android:gravity="center_horizontal"
+                android:visibility="invisible"
+                tools:text="You voted"
+                android:text="You voted" />
+
         </GridLayout>
 
         <TextView
@@ -82,8 +95,22 @@
                 android:layout_column="0"
                 android:layout_row="0"
                 android:textColor="@color/cardview_light_background"
-                android:gravity="center_horizontal"
+                android:gravity="center_vertical|center_horizontal"
                 android:translationY="20dp" />
+
+            <TextView
+                android:text="You voted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/youVotedB"
+                android:translationY="-20dp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:textColor="@color/cardview_light_background"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible"
+                tools:text="You voted" />
         </GridLayout>
 
     </LinearLayout>

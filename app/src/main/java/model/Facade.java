@@ -21,25 +21,25 @@ public class Facade {
 
         // initialize the one facade instance for the application
         facade = new Facade();
-        Question q1 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
+        Question q1 = new Question("Who will be the President of the US", "Donald Trump", "Hillary Clinton");
         q1.setACount(55);
         q1.setBCount(77);
         Question q2 = new Question("Would you date someone on Tinder?", "No", "Ewww!");
         q2.setACount(50);
         q2.setBCount(112);
-        Question q3 = new Question("Are you happy with your student life?", "Donald Trum", "of course!");
+        Question q3 = new Question("Are you happy with your student life?", "I love GT", "Nope!");
         q3.setACount(10);
         q3.setBCount(2);
         Question q4 = new Question("Which fastfood item has more calories?", "Dunkin's donut jelly donut", "taco bells crunchwrap");
         q4.setACount(388);
         q4.setBCount(412);
-        Question q5 = new Question("Which starbuck order is better?", "Caramel macchiato", "sexy corn cob");
+        Question q5 = new Question("Which Starbucks order is better?", "Caramel macchiato", "sexy corn cob");
         q5.setACount(32);
         q5.setBCount(12);
-        Question q6 = new Question("Which hallowen costume do you prefer?", "sexy ronald mcdonal", "Hillary Clinton");
+        Question q6 = new Question("Which Halloween costume do you prefer?", "sexy ronald mcdonal", "Hillary Clinton");
         q6.setACount(388);
         q6.setBCount(912);
-        Question q7 = new Question("Would you rather", "be colorblind", "lose ur sense of smell");
+        Question q7 = new Question("Would you rather", "be color blind", "lose ur sense of smell");
         q7.setACount(38);
         q7.setBCount(91);
         List<Question> listQ1 = new ArrayList<>(Arrays.asList(q1, q2, q3, q4, q5, q6, q7));

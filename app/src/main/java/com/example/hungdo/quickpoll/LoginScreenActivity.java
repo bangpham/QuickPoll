@@ -27,6 +27,7 @@ public class LoginScreenActivity extends Activity {
         EditText editText = (EditText) findViewById(R.id.userNameEnter);
         facade.getUserByID(editText.getText().toString());
         Intent mainScreen = new Intent(LoginScreenActivity.this, MainScreenActivity.class);
+        //mainScreen.putExtra("bmi", bmi); //passing value
         LoginScreenActivity.this.startActivity(mainScreen);
     }
 

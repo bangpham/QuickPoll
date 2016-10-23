@@ -11,16 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hungdo.quickpoll.LoginScreenActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/flash"
-        android:id="@+id/imageView2"
-        android:layout_alignParentTop="false"
-        android:layout_alignStart="@+id/UserNameSubmit"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="41dp" />
-
     <Button
         android:text="Submit"
         android:layout_width="wrap_content"

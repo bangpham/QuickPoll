@@ -29,11 +29,11 @@ public class Facade {
         Question q7 = new Question("Would you rather", "be colorblind", "lose ur sense of smell");
         List<Question> listQ1 = new ArrayList<>(Arrays.asList(q1, q2, q3, q4, q5, q6, q7));
         User user1 = new User("4043458278", listQ1);
-<<<<<<< HEAD
+
         Question q8 = new Question("Is Bang dep trai?", "No", "Ewww!");
-=======
-        Question q8 = new Question("this is different", "thisasd","Hillary Clinton");
->>>>>>> 3717414c44c4da1660a777bfab6a133dabf44a3f
+
+
+
         Question q9 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q10 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
         Question q11 = new Question("Who will be the President of the US", "Donald Trum", "Hillary Clinton");
